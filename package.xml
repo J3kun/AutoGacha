@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>AutoCompleteFetchQuests</title>
+  <id>j3kun.autocompletefetchquests.mod</id>
+  <author>J3kun</author>
+  <loadPriority>100</loadPriority>
+  <version>0.23.74</version>
+  <tags></tags>
+  <description>
+  Tired of refreshing quest boards and manually turning in item fetch quests? 
+  This mod, when enabled, will automatically complete fetch quests upon looking in or refreshing the quest board.
+
+
+  [h1] !! WARNING !! [/h1]
+  This mod makes no attempt to turn in fetch quest items based on any sense of value nor does it have confirmation popups. 
+  This means that any item that is normally eligible for turning in (i.e in your inventory/base storage but not marked important) can and will be turned in.
+  If you have a legendary crossbow/sword/etc that you want to keep, I recommend putting it in a follower, in a locked chest, or marking as important and putting on your person.
+  Furthermore, when given the option of multiple items to try to turn in, (i.e you have 3 types of clay to try and turn in), it uses the games built in methods to find the first
+  eligible item and uses it. This means if you have items like potions which you may want to keep certain types while using others, you should follow the above methods to secure
+  your important variants of items.
+
+  From my preliminary testing, I have not ran into any crashes while running this mod. I tested on my current playthrough and ran into no compatbility issues with other mods I use. (AutoAct, Stamina Action Stop)
+  I've developed this in my free time, so I will likely not develop this mod or any other mod any further unless something in the future 
+  annoys me as much as refreshing quest boards did.
+
+  This mod requires EvilMasks ModOptions mod in order to load: [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341]https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341[/url]
+  
+  This is my first mod, so I will thank the Elin modding community for providing resources and examples to follow. Much of the code is inspired or taken from mods like Stamina Action Stop by Omega or 
+  FarmDoctor by Drakeny.
+  </description>
+  <builtin>false</builtin>
+</Meta>
