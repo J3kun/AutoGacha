@@ -23,10 +23,12 @@
   I've developed this in my free time, so I will likely not develop this mod or any other mod any further unless something in the future 
   annoys me as much as refreshing quest boards did.
 
-  This mod requires EvilMasks ModOptions mod in order to load: [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341]https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341[/url]
+  This mod requires EvilMasks ModOptions mod in order to load: [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341][/url]
   
   This is my first mod, so I will thank the Elin modding community for providing resources and examples to follow. Much of the code is inspired or taken from mods like Stamina Action Stop by Omega or 
   FarmDoctor by Drakeny.
+
+  Github link to repo: [*][url=https://github.com/J3kun/AutoCompleteFetchQuests][/url]
   </description>
   <builtin>false</builtin>
 </Meta>
