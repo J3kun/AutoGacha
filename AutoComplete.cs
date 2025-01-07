@@ -11,7 +11,7 @@ namespace AutoCompleteFetchQuests;
 [HarmonyPatch]
 public class AutoComplete
 {
-	static List<int> questsToComplete = new List<int>{};
+	static List<Quest> questsToComplete = new List<Quest>{};
 	[HarmonyPrefix, HarmonyPatch(typeof(ItemQuest), nameof(ItemQuest.SetQuest))]
 	 static bool logCompletableFetchQuest(Quest q)
 	{
@@ -22,7 +22,7 @@ public class AutoComplete
 		if (q is QuestSupply questSupply && questSupply.GetDestThing() != null)
         {
 			AutoCompletePlugin.bepLogger.LogInfo("Logging a quest to autocomplete:" + q.uid);
-			questsToComplete.Add(q.uid);
+			questsToComplete.Add(q);
         }
 		return true;
 	}
@@ -37,12 +37,10 @@ public class AutoComplete
 			return;
 		}
 		AutoCompletePlugin.bepLogger.LogInfo("Autocompleting Quests");
-		List<object> quests = __instance.list.items;
-		foreach(Quest q in quests) {
-			if (questsToComplete.Contains(q.uid)) {
-				AutoCompletePlugin.bepLogger.LogInfo("Autocompleted:" + q.uid);
-				q.Deliver(q.chara, null);
-			}
+		
+		foreach(Quest q in questsToComplete) {
+			AutoCompletePlugin.bepLogger.LogInfo("Autocompleted:" + q.uid);
+			q.Deliver(q.chara, null);
 		}
 		questsToComplete.Clear();
 		__instance.RefreshQuest();
@@ -57,7 +55,7 @@ public class AutoComplete
 		AutoCompletePlugin.bepLogger.LogInfo("Auto Ignore Quest Removal was called for quest:" + q.id);
 		bool wasIgnored = false;
 		
-		if (questsToComplete.Contains(q.uid)) {
+		if (questsToComplete.Contains(q)) {
 			wasIgnored = true;
 			AutoCompletePlugin.bepLogger.LogInfo("An autocompleted fetch quest was ignored.");
 		}
