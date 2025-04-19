@@ -10,14 +10,17 @@
   Tired of manually clicking each gacha coin into the machine? Or opening each gacha ball individually? 
   This mod, when enabled, will allow you to input as many gacha coins as you'd like into the gacha machine and open all gacha balls at once.
 
+  This mod requires EvilMasks ModOptions mod in order to load: [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341][/url]
 
-  [h1] !! WARNING !! [/h1]
+  [h1] !! HEADS UP !! [/h1]
 
   From my preliminary testing, I have not ran into any crashes while running this mod. I tested on my current playthrough and ran into no compatibility issues with other mods I use. (AutoAct, Stamina Action Stop)
-  I've developed this in my free time, so I will likely not develop this mod or any other mod any further unless something in the future 
-  annoys me again.
+  I've developed this in my free time, so I will likely not develop this mod any further unless something in the future annoys me again.
 
-  This mod requires EvilMasks ModOptions mod in order to load: [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3381182341][/url]
+  In case of errors:
+  
+  If there are issues with this mod, it will likely be if other mods modify the behavior of gacha machines or if gacha machine logic changes in the future.
+
 
   Github link to repo: [*][url=https://github.com/J3kun/AutoGacha][/url]
   </description>
