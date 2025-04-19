@@ -1,1 +1,1 @@
-Autocompletes fetch quests in the video game Elin.
+Auto dispenses and uses gacha balls in the video game Elin.

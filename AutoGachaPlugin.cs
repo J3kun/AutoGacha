@@ -8,10 +8,10 @@ using System.Reflection;
 using System;
 using System.Linq;
 
-namespace AutoCompleteFetchQuests;
+namespace AutoGacha;
 
-[BepInPlugin("j3kun.autocompletefetchquests.mod", "AutoCompleteFetchQuests", "1.0.0")]
-public class AutoCompletePlugin : BaseUnityPlugin
+[BepInPlugin("j3kun.autogacha.mod", "AutoGacha", "1.0.0")]
+public class AutoGachaPlugin : BaseUnityPlugin
 {
     private static Harmony harmony;
     internal static ManualLogSource bepLogger;
@@ -21,15 +21,15 @@ public class AutoCompletePlugin : BaseUnityPlugin
      private void Awake()
     {
         bepLogger = Logger;
-        bepLogger.LogInfo("AutoCompleteFetchQuests Loaded.");
+        bepLogger.LogInfo("AutoGacha Loaded.");
     }
 
     private void Start()
     {
-        AutoCompleteFetchQuestsUIConfig.LoadConfig(Config);
-        harmony = new Harmony("j3kun.autocompletefetchquests.mod");
-        harmony.PatchAll(typeof(AutoComplete));
-        bepLogger.LogInfo("HarmonyPatchLoaded for AutoCompleteFetchQuests");
+        AutoGachaUIConfig.LoadConfig(Config);
+        harmony = new Harmony("j3kun.autogacha.mod");
+        harmony.PatchAll(typeof(AutoGacha));
+        bepLogger.LogInfo("HarmonyPatchLoaded for AutoGacha");
         if (this.IsModOptionsInstalled())
       {
         try

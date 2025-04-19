@@ -8,7 +8,7 @@ using System.Reflection;
 using UnityEngine;
 
 
-namespace AutoCompleteFetchQuests;
+namespace AutoGacha;
 
   public static class UIController
   {
@@ -18,17 +18,17 @@ namespace AutoCompleteFetchQuests;
       {
         if (obj is BaseUnityPlugin baseUnityPlugin && baseUnityPlugin.Info.Metadata.GUID == "evilmask.elinplugins.modoptions")
         {
-          ModOptionController controller = ModOptionController.Register("j3kun.autocompletefetchquests.mod", "AutoCompleteFetchQuests");
-          AutoCompletePlugin.bepLogger.LogInfo(controller.ToString());
-          controller.SetTranslation("j3kun.autocompletefetchquests.mod", "AutoCompleteFetchQuests");
+          ModOptionController controller = ModOptionController.Register("j3kun.autogacha.mod", "AutoGacha");
+          AutoGachaPlugin.bepLogger.LogInfo(controller.ToString());
+          controller.SetTranslation("j3kun.autogacha.mod", "AutoGacha");
           string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
           if (directoryName != null)
           {
-            AutoCompleteFetchQuestsUIConfig.InitializeXmlPath(Path.Combine(directoryName, "AutoCompleteFetchQuestsUIConfig.xml"));
+            AutoGachaUIConfig.InitializeXmlPath(Path.Combine(directoryName, "AutoGachaUIConfig.xml"));
           }
-          if (File.Exists(AutoCompleteFetchQuestsUIConfig.XmlPath))
+          if (File.Exists(AutoGachaUIConfig.XmlPath))
           {
-            using (StreamReader streamReader = new StreamReader(AutoCompleteFetchQuestsUIConfig.XmlPath))
+            using (StreamReader streamReader = new StreamReader(AutoGachaUIConfig.XmlPath))
               controller.SetPreBuildWithXml(streamReader.ReadToEnd());
           }
           UIController.RegisterEvents(controller);
@@ -42,9 +42,9 @@ namespace AutoCompleteFetchQuests;
       {
           builder.GetPreBuild<OptHLayout>("hlayout01").Base.childForceExpandHeight = false;
           builder.GetPreBuild<OptVLayout>("vlayout01").Base.childForceExpandHeight = false;
-          OptToggle preBuild1 = builder.GetPreBuild<OptToggle>("autoCompleteEnabled");
-          preBuild1.Checked = AutoCompleteFetchQuestsUIConfig.autoCompleteEnabled.Value;
-          preBuild1.OnValueChanged += (Action<bool>)(isChecked => AutoCompleteFetchQuestsUIConfig.autoCompleteEnabled.Value = isChecked);
+          OptToggle preBuild1 = builder.GetPreBuild<OptToggle>("autoGachaEnabled");
+          preBuild1.Checked = AutoGachaUIConfig.autoGachaEnabled.Value;
+          preBuild1.OnValueChanged += (Action<bool>)(isChecked => AutoGachaUIConfig.autoGachaEnabled.Value = isChecked);
       };
     }
   }

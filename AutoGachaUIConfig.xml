@@ -2,8 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfigLayoutSchema.xsd">
     <hlayout id="hlayout01">
         <vlayout id="vlayout01" border="true">
-            <toggle id="autoCompleteEnabled">
-                <contentId>autoCompleteEnabled.toggle.content01</contentId>
+            <toggle id="autoGachaEnabled">
+                <contentId>Enable Autogacha</contentId>
             </toggle>
+        </vlayout>
     </hlayout>
 </config>
